@@ -30,3 +30,14 @@ ADDING CLASSIFIER TO THE SYSTEM:
 Download/Copy the model and place it in the location:
 <directory to git repo>/stanford-kbp/edu/stanford/nlp/kbp
 
+
+SR PARSER models download:
+==========================
+Need to download SR Parser models which is needed for post IR annotator:
+http://nlp.stanford.edu/software/stanford-srparser-2014-10-23-models.jar
+
+Adding SR parser models to system:
+==================================
+Place them in this location for the system to detect them correctly:
+<path to git repo>/stanford-kbp/edu/stanford/nlp/models
+
