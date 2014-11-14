@@ -1,0 +1,5 @@
+Need to download SR Parser models which is needed for post IR annotator:
+http://nlp.stanford.edu/software/stanford-srparser-2014-10-23-models.jar
+
+Place them in this location for the system to detect them correctly:
+<path to git repo>/stanford-kbp/edu/stanford/nlp/models
