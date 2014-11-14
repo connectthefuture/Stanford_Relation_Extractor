@@ -1,0 +1,4 @@
+{ result: "per:alternate_names", pattern: ( $ENTITY /,|is/? /more|also/? /commonly/? /known/ /as/ $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY /\(|,/ /([nN]ow)|([Aa]lso)/ /known|called/? /as/? $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $ENTITY []{0,3} /maiden/ /name/ []{0,3} $SLOT_VALUE ) }
+{ result: "per:alternate_names", pattern: ( $SLOT_VALUE []{0,3} /maiden/ /name/ []{0,3} $ENTITY ) }

@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kbpslotfill>
+  <query id="SF14_ENG_001">
+    <name>Ahmed Rashid</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-100600-11180231</docid>
+    <beg>21904</beg>
+    <end>21915</end>
+  </query>
+  <query id="SF14_ENG_002">
+    <name>Wayne A. Holst</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-149594-10591430</docid>
+    <beg>242</beg>
+    <end>255</end>
+  </query>
+  <query id="SF14_ENG_003">
+    <name>Craig Ranke</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-201-185517-392401</docid>
+    <beg>17720</beg>
+    <end>17730</end>
+  </query>
+  <query id="SF14_ENG_004">
+    <name>Tamaihia Lynae Moore</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-100841-10920936</docid>
+    <beg>690</beg>
+    <end>709</end>
+  </query>
+  <query id="SF14_ENG_005">
+    <name>Korey Rowe</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-201-185517-411105</docid>
+    <beg>745</beg>
+    <end>754</end>
+  </query>
+  <query id="SF14_ENG_006">
+    <name>Christopher Bollyn</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-201-185517-403574</docid>
+    <beg>4974</beg>
+    <end>4991</end>
+  </query>
+  <query id="SF14_ENG_007">
+    <name>Benjamin Chertoff</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-201-185517-407403</docid>
+    <beg>24464</beg>
+    <end>24480</end>
+  </query>
+  <query id="SF14_ENG_008">
+    <name>Richard Gage</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-201-185517-392710</docid>
+    <beg>13166</beg>
+    <end>13177</end>
+  </query>
+  <query id="SF14_ENG_009">
+    <name>Frank Chiafari</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20100225.1650</docid>
+    <beg>470</beg>
+    <end>483</end>
+  </query>
+  <query id="SF14_ENG_010">
+    <name>Sandra Herold</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20091207.0812</docid>
+    <beg>454</beg>
+    <end>466</end>
+  </query>
+  <query id="SF14_ENG_011">
+    <name>Adela Dworin</name>
+    <enttype>PER</enttype>
+    <docid>XIN_ENG_20101201.0249</docid>
+    <beg>368</beg>
+    <end>379</end>
+  </query>
+  <query id="SF14_ENG_012">
+    <name>Alan Gross</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101102.0758</docid>
+    <beg>5453</beg>
+    <end>5462</end>
+  </query>
+  <query id="SF14_ENG_013">
+    <name>Jamie Leigh Jones</name>
+    <enttype>PER</enttype>
+    <docid>eng-WL-11-99173-9828748</docid>
+    <beg>39209</beg>
+    <end>39225</end>
+  </query>
+  <query id="SF14_ENG_014">
+    <name>Mario Gonzalez</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101104.0018</docid>
+    <beg>2754</beg>
+    <end>2767</end>
+  </query>
+  <query id="SF14_ENG_015">
+    <name>George Sodini</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20100727.0174</docid>
+    <beg>2253</beg>
+    <end>2265</end>
+  </query>
+  <query id="SF14_ENG_016">
+    <name>Norris Church Mailer</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20100406.0070</docid>
+    <beg>1100</beg>
+    <end>1119</end>
+  </query>
+  <query id="SF14_ENG_017">
+    <name>Carol Daniels</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20090831.1221</docid>
+    <beg>324</beg>
+    <end>336</end>
+  </query>
+  <query id="SF14_ENG_018">
+    <name>Arlo Looking Cloud</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-126982-9181238</docid>
+    <beg>1474</beg>
+    <end>1491</end>
+  </query>
+  <query id="SF14_ENG_019">
+    <name>John Graham</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-126982-8246059</docid>
+    <beg>18625</beg>
+    <end>18635</end>
+  </query>
+  <query id="SF14_ENG_020">
+    <name>Annie Mae Aquash</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101210.0842</docid>
+    <beg>458</beg>
+    <end>473</end>
+  </query>
+  <query id="SF14_ENG_021">
+    <name>Pauliina Miettinen</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20100412.0109</docid>
+    <beg>1860</beg>
+    <end>1877</end>
+  </query>
+  <query id="SF14_ENG_022">
+    <name>Heloise</name>
+    <enttype>PER</enttype>
+    <docid>WPB_ENG_20100623.0056</docid>
+    <beg>780</beg>
+    <end>786</end>
+  </query>
+  <query id="SF14_ENG_023">
+    <name>Vladimir Ladyzhenskiy</name>
+    <enttype>PER</enttype>
+    <docid>XIN_ENG_20100807.0094</docid>
+    <beg>185</beg>
+    <end>205</end>
+  </query>
+  <query id="SF14_ENG_024">
+    <name>Ruben van Assouw</name>
+    <enttype>PER</enttype>
+    <docid>AFP_ENG_20100515.0380</docid>
+    <beg>224</beg>
+    <end>239</end>
+  </query>
+  <query id="SF14_ENG_025">
+    <name>Asia Bibi</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101212.0279</docid>
+    <beg>755</beg>
+    <end>763</end>
+  </query>
+  <query id="SF14_ENG_026">
+    <name>Nir Rosen</name>
+    <enttype>PER</enttype>
+    <docid>bolt-eng-DF-212-191695-3084178</docid>
+    <beg>45365</beg>
+    <end>45373</end>
+  </query>
+  <query id="SF14_ENG_027">
+    <name>Shah Abdul Aziz</name>
+    <enttype>PER</enttype>
+    <docid>eng-NG-31-142154-10030692</docid>
+    <beg>6545</beg>
+    <end>6559</end>
+  </query>
+  <query id="SF14_ENG_028">
+    <name>Eloise Spooner</name>
+    <enttype>PER</enttype>
+    <docid>XIN_ENG_20100721.0261</docid>
+    <beg>1648</beg>
+    <end>1661</end>
+  </query>
+  <query id="SF14_ENG_029">
+    <name>Rene Piedra</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20101120.0029</docid>
+    <beg>307</beg>
+    <end>317</end>
+  </query>
+  <query id="SF14_ENG_030">
+    <name>Natalie Hagemo</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20100613.0052</docid>
+    <beg>39103</beg>
+    <end>39116</end>
+  </query>
+  <query id="SF14_ENG_031">
+    <name>Mark Fisher</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20091102.0023</docid>
+    <beg>654</beg>
+    <end>664</end>
+  </query>
+  <query id="SF14_ENG_032">
+    <name>Esther-Ethy Mamane</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20090624.0461</docid>
+    <beg>638</beg>
+    <end>655</end>
+  </query>
+  <query id="SF14_ENG_033">
+    <name>Wen Qiang</name>
+    <enttype>PER</enttype>
+    <docid>XIN_ENG_20090925.0369</docid>
+    <beg>1106</beg>
+    <end>1114</end>
+  </query>
+  <query id="SF14_ENG_034">
+    <name>Xie Caiping</name>
+    <enttype>PER</enttype>
+    <docid>XIN_ENG_20100122.0302</docid>
+    <beg>1039</beg>
+    <end>1049</end>
+  </query>
+  <query id="SF14_ENG_035">
+    <name>Chen Tao</name>
+    <enttype>PER</enttype>
+    <docid>AFP_ENG_20100414.0500</docid>
+    <beg>2490</beg>
+    <end>2497</end>
+  </query>
+  <query id="SF14_ENG_036">
+    <name>Michael Lomax</name>
+    <enttype>PER</enttype>
+    <docid>WPB_ENG_20100409.0051</docid>
+    <beg>8600</beg>
+    <end>8612</end>
+  </query>
+  <query id="SF14_ENG_037">
+    <name>Assaf Ramon</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20090913.0031</docid>
+    <beg>1718</beg>
+    <end>1728</end>
+  </query>
+  <query id="SF14_ENG_038">
+    <name>Andrew E. Lange</name>
+    <enttype>PER</enttype>
+    <docid>NYT_ENG_20100128.0046</docid>
+    <beg>3995</beg>
+    <end>4009</end>
+  </query>
+  <query id="SF14_ENG_039">
+    <name>Frank Baldino Jr.</name>
+    <enttype>PER</enttype>
+    <docid>WPB_ENG_20100826.0077</docid>
+    <beg>4181</beg>
+    <end>4197</end>
+  </query>
+  <query id="SF14_ENG_040">
+    <name>Sarah Kunstler</name>
+    <enttype>PER</enttype>
+    <docid>LTW_ENG_20091210.0035</docid>
+    <beg>9409</beg>
+    <end>9422</end>
+  </query>
+  <query id="SF14_ENG_041">
+    <name>Youssoufou Bamba</name>
+    <enttype>PER</enttype>
+    <docid>WPB_ENG_20101230.0062</docid>
+    <beg>3047</beg>
+    <end>3062</end>
+  </query>
+  <query id="SF14_ENG_042">
+    <name>Charles Ble Goude</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101231.0281</docid>
+    <beg>3824</beg>
+    <end>3840</end>
+  </query>
+  <query id="SF14_ENG_043">
+    <name>Matteo Messina Denaro</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20091115.0675</docid>
+    <beg>1301</beg>
+    <end>1321</end>
+  </query>
+  <query id="SF14_ENG_044">
+    <name>Terry Jupp</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20100901.0584</docid>
+    <beg>356</beg>
+    <end>365</end>
+  </query>
+  <query id="SF14_ENG_045">
+    <name>Eugenio Vagni</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20090613.0176</docid>
+    <beg>903</beg>
+    <end>915</end>
+  </query>
+  <query id="SF14_ENG_046">
+    <name>Eliza Samudio</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20100804.0856</docid>
+    <beg>674</beg>
+    <end>686</end>
+  </query>
+  <query id="SF14_ENG_047">
+    <name>Joseph Cerniglia</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20101004.0093</docid>
+    <beg>416</beg>
+    <end>431</end>
+  </query>
+  <query id="SF14_ENG_048">
+    <name>Arline Kercher</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20091204.0421</docid>
+    <beg>2577</beg>
+    <end>2590</end>
+  </query>
+  <query id="SF14_ENG_049">
+    <name>Amanda Knox</name>
+    <enttype>PER</enttype>
+    <docid>AFP_ENG_20091204.0026</docid>
+    <beg>89</beg>
+    <end>99</end>
+  </query>
+  <query id="SF14_ENG_050">
+    <name>Laura Silsby</name>
+    <enttype>PER</enttype>
+    <docid>APW_ENG_20100308.0996</docid>
+    <beg>750</beg>
+    <end>761</end>
+  </query>
+  <query id="SF14_ENG_051">
+    <name>Semen Gresik</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-128524-9298423</docid>
+    <beg>5694</beg>
+    <end>5705</end>
+  </query>
+  <query id="SF14_ENG_052">
+    <name>Coastal Conservation League</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-104379-11707340</docid>
+    <beg>2318</beg>
+    <end>2344</end>
+  </query>
+  <query id="SF14_ENG_053">
+    <name>Koch Foods</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-107898-8913527</docid>
+    <beg>1599</beg>
+    <end>1608</end>
+  </query>
+  <query id="SF14_ENG_054">
+    <name>Progressive Democrats of America</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-142503-10055519</docid>
+    <beg>456</beg>
+    <end>487</end>
+  </query>
+  <query id="SF14_ENG_055">
+    <name>Gay Men's Health Crisis</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-126590-9153633</docid>
+    <beg>6641</beg>
+    <end>6663</end>
+  </query>
+  <query id="SF14_ENG_056">
+    <name>Qatalys, Inc.</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-129729-8403979</docid>
+    <beg>724</beg>
+    <end>736</end>
+  </query>
+  <query id="SF14_ENG_057">
+    <name>bestpartyever.com</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-133108-8478051</docid>
+    <beg>162</beg>
+    <end>178</end>
+  </query>
+  <query id="SF14_ENG_058">
+    <name>Rocketboots</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-135613-9764638</docid>
+    <beg>1295</beg>
+    <end>1305</end>
+  </query>
+  <query id="SF14_ENG_059">
+    <name>Scrapblog</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-135183-9645053</docid>
+    <beg>565</beg>
+    <end>573</end>
+  </query>
+  <query id="SF14_ENG_060">
+    <name>United Association for Studies and Research</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-128245-9254813</docid>
+    <beg>12640</beg>
+    <end>12682</end>
+  </query>
+  <query id="SF14_ENG_061">
+    <name>Countrywide Financial</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-126255-8192197</docid>
+    <beg>1014</beg>
+    <end>1034</end>
+  </query>
+  <query id="SF14_ENG_062">
+    <name>High Point Church</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-139424-8642313</docid>
+    <beg>726</beg>
+    <end>742</end>
+  </query>
+  <query id="SF14_ENG_063">
+    <name>The Good Broker, LLC</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-133491-9562377</docid>
+    <beg>238</beg>
+    <end>257</end>
+  </query>
+  <query id="SF14_ENG_064">
+    <name>Sycamore Software Solutions</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-135298-9725339</docid>
+    <beg>3120</beg>
+    <end>3146</end>
+  </query>
+  <query id="SF14_ENG_065">
+    <name>Myanmar Equestrian Federation</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20101227.0235</docid>
+    <beg>264</beg>
+    <end>292</end>
+  </query>
+  <query id="SF14_ENG_066">
+    <name>Central American Parliament</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20091123.0278</docid>
+    <beg>868</beg>
+    <end>894</end>
+  </query>
+  <query id="SF14_ENG_067">
+    <name>Association of Chinese American Scientists and Engineers</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20101001.0243</docid>
+    <beg>1787</beg>
+    <end>1842</end>
+  </query>
+  <query id="SF14_ENG_068">
+    <name>China Charity Federation</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20100120.0348</docid>
+    <beg>878</beg>
+    <end>901</end>
+  </query>
+  <query id="SF14_ENG_069">
+    <name>Zirh</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20091120.1033</docid>
+    <beg>1183</beg>
+    <end>1186</end>
+  </query>
+  <query id="SF14_ENG_070">
+    <name>Thai Petrochemical Industry Plc</name>
+    <enttype>ORG</enttype>
+    <docid>eng-NG-31-127452-9227997</docid>
+    <beg>8049</beg>
+    <end>8079</end>
+  </query>
+  <query id="SF14_ENG_071">
+    <name>Dance Theatre of Harlem</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100627.0071</docid>
+    <beg>2960</beg>
+    <end>2982</end>
+  </query>
+  <query id="SF14_ENG_072">
+    <name>National Urban League</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20100729.0489</docid>
+    <beg>364</beg>
+    <end>384</end>
+  </query>
+  <query id="SF14_ENG_073">
+    <name>Helen Keller International</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100102.0054</docid>
+    <beg>4139</beg>
+    <end>4164</end>
+  </query>
+  <query id="SF14_ENG_074">
+    <name>Huntington Library, Art Collections and Botanical Gardens</name>
+    <enttype>ORG</enttype>
+    <docid>WPB_ENG_20100719.0004</docid>
+    <beg>878</beg>
+    <end>934</end>
+  </query>
+  <query id="SF14_ENG_075">
+    <name>National Restaurant Association</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20101006.0029</docid>
+    <beg>440</beg>
+    <end>470</end>
+  </query>
+  <query id="SF14_ENG_076">
+    <name>Hollister Inc.</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100520.0192</docid>
+    <beg>3476</beg>
+    <end>3489</end>
+  </query>
+  <query id="SF14_ENG_077">
+    <name>American Association of University Women</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100321.0126</docid>
+    <beg>1409</beg>
+    <end>1448</end>
+  </query>
+  <query id="SF14_ENG_078">
+    <name>ALICO</name>
+    <enttype>ORG</enttype>
+    <docid>AFP_ENG_20100308.0424</docid>
+    <beg>123</beg>
+    <end>127</end>
+  </query>
+  <query id="SF14_ENG_079">
+    <name>Alessi</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20090615.0053</docid>
+    <beg>5093</beg>
+    <end>5098</end>
+  </query>
+  <query id="SF14_ENG_080">
+    <name>Menil Collection</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100205.0073</docid>
+    <beg>4329</beg>
+    <end>4344</end>
+  </query>
+  <query id="SF14_ENG_081">
+    <name>BedBug Central</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20100901.0215</docid>
+    <beg>1115</beg>
+    <end>1128</end>
+  </query>
+  <query id="SF14_ENG_082">
+    <name>Pluribus Capital Management</name>
+    <enttype>ORG</enttype>
+    <docid>LTW_ENG_20091211.0103</docid>
+    <beg>2401</beg>
+    <end>2427</end>
+  </query>
+  <query id="SF14_ENG_083">
+    <name>Morita Chemical Industries Co</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20091224.0050</docid>
+    <beg>1852</beg>
+    <end>1880</end>
+  </query>
+  <query id="SF14_ENG_084">
+    <name>Greenberg Smoked Turkey</name>
+    <enttype>ORG</enttype>
+    <docid>NYT_ENG_20101109.0074</docid>
+    <beg>1989</beg>
+    <end>2011</end>
+  </query>
+  <query id="SF14_ENG_085">
+    <name>Third Guard Division</name>
+    <enttype>ORG</enttype>
+    <docid>AFP_ENG_20090728.0402</docid>
+    <beg>402</beg>
+    <end>421</end>
+  </query>
+  <query id="SF14_ENG_086">
+    <name>National Congress of American Indians</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20100716.1093</docid>
+    <beg>1088</beg>
+    <end>1124</end>
+  </query>
+  <query id="SF14_ENG_087">
+    <name>National Taiwan Symphony Orchestra</name>
+    <enttype>ORG</enttype>
+    <docid>CNA_ENG_20100929.0036</docid>
+    <beg>400</beg>
+    <end>433</end>
+  </query>
+  <query id="SF14_ENG_088">
+    <name>New Fabris</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20090713.0630</docid>
+    <beg>524</beg>
+    <end>533</end>
+  </query>
+  <query id="SF14_ENG_089">
+    <name>ShopperTrak</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20101229.0420</docid>
+    <beg>338</beg>
+    <end>348</end>
+  </query>
+  <query id="SF14_ENG_090">
+    <name>Tribeca Enterprises</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20100121.1396</docid>
+    <beg>2336</beg>
+    <end>2354</end>
+  </query>
+  <query id="SF14_ENG_091">
+    <name>Corporate Library</name>
+    <enttype>ORG</enttype>
+    <docid>AFP_ENG_20090813.0095</docid>
+    <beg>579</beg>
+    <end>595</end>
+  </query>
+  <query id="SF14_ENG_092">
+    <name>Pacific Asia Travel Association</name>
+    <enttype>ORG</enttype>
+    <docid>AFP_ENG_20100713.0579</docid>
+    <beg>685</beg>
+    <end>715</end>
+  </query>
+  <query id="SF14_ENG_093">
+    <name>United Solutions and Services</name>
+    <enttype>ORG</enttype>
+    <docid>WPB_ENG_20101209.0072</docid>
+    <beg>4592</beg>
+    <end>4620</end>
+  </query>
+  <query id="SF14_ENG_094">
+    <name>Organization of Asia-Pacific News Agencies</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20101126.0007</docid>
+    <beg>894</beg>
+    <end>935</end>
+  </query>
+  <query id="SF14_ENG_095">
+    <name>Professional Ski Instructors of America</name>
+    <enttype>ORG</enttype>
+    <docid>WPB_ENG_20100210.0032</docid>
+    <beg>284</beg>
+    <end>322</end>
+  </query>
+  <query id="SF14_ENG_096">
+    <name>ADF</name>
+    <enttype>ORG</enttype>
+    <docid>bolt-eng-DF-170-181103-8886636</docid>
+    <beg>47464</beg>
+    <end>47466</end>
+  </query>
+  <query id="SF14_ENG_097">
+    <name>National Energy Administration</name>
+    <enttype>ORG</enttype>
+    <docid>XIN_ENG_20100105.0350</docid>
+    <beg>285</beg>
+    <end>314</end>
+  </query>
+  <query id="SF14_ENG_098">
+    <name>Nuclear Decommissioning Authority</name>
+    <enttype>ORG</enttype>
+    <docid>APW_ENG_20091028.0948</docid>
+    <beg>611</beg>
+    <end>643</end>
+  </query>
+  <query id="SF14_ENG_099">
+    <name>St. Mary's</name>
+    <enttype>ORG</enttype>
+    <docid>LTW_ENG_20090704.0035</docid>
+    <beg>475</beg>
+    <end>484</end>
+  </query>
+  <query id="SF14_ENG_100">
+    <name>Joint Victory Campaign 2004</name>
+    <enttype>ORG</enttype>
+    <docid>bolt-eng-DF-170-181123-90974</docid>
+    <beg>17073</beg>
+    <end>17099</end>
+  </query>
+</kbpslotfill>

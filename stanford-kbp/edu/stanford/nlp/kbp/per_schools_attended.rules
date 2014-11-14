@@ -1,0 +1,10 @@
+{ result: "per:schools_attended", pattern: ( $ENTITY /attended/ /the/? $SLOT_VALUE /[Cc]ollege|[Uu]niversity|[Ss]chool/ ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /attended/ /the/? /[Cc]ollege|[Uu]niversity|[Ss]chool/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /enrolled/ /in/ /the/? $SLOT_VALUE /[Cc]ollege|[Uu]niversity|[Ss]chool/ ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /enrolled/ /in/ /the/? /[Cc]ollege|[Uu]niversity|[Ss]chool/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /enrolled/ []{0,5} /degree|major|program/ /at/ /the/? $SLOT_VALUE /[Cc]ollege|[Uu]niversity|[Ss]chool/ ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /enrolled/ []{0,5} /degree|major|program/ /at/ /the/? /[Cc]ollege|[Uu]niversity|[Ss]chool/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /educated/ /at/ /the/? $SLOT_VALUE /[Cc]ollege|[Uu]niversity|[Ss]chool/ ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /educated/ /at/ /the/? /[Cc]ollege|[Uu]niversity|[Ss]chool/ $SLOT_VALUE ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /graduated/ /from/ /the/? $SLOT_VALUE /[Cc]ollege|[Uu]niversity|[Ss]chool/ ) }
+{ result: "per:schools_attended", pattern: ( $ENTITY /graduated/ /from/ /the/? /[Cc]ollege|[Uu]niversity|[Ss]chool/ $SLOT_VALUE ) }

@@ -1,0 +1,10 @@
+// From Ce's features
+{ result:"org:founded_by", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/founder/}] $SLOT_VALUE ) } 0.470588
+{ result:"org:founded_by", pattern: ( $ENTITY [{lemma:/co-founder/}] $SLOT_VALUE ) } 0.480932
+{ result:"org:founded_by", pattern: ( $ENTITY [{lemma:/co/}] [{lemma:/-/}] [{lemma:/founder/}] $SLOT_VALUE ) } 0.821429
+{ result:"org:founded_by", pattern: ( $ENTITY [{lemma:/founder/}] $SLOT_VALUE ) } 0.360529
+{ result:"org:founded_by", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/founder/}] [{lemma:/of/}] $ENTITY ) } 0.109589
+{ result:"org:founded_by", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/founder/}] [{lemma:/of/}] [{lemma:/the/}] $ENTITY ) } 0.0952381
+{ result:"org:founded_by", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/the/}] [{lemma:/founder/}] [{lemma:/of/}] $ENTITY ) } 0.196429
+{ result:"org:founded_by", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/the/}] [{lemma:/founder/}] [{lemma:/of/}] [{lemma:/the/}] $ENTITY ) } 0.235294
+{ result:"org:founded_by", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/founder/}] [{lemma:/of/}] $ENTITY ) } 0.272727

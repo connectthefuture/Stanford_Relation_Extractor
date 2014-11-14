@@ -1,0 +1,11 @@
+{ result: "org:top_members/employees", pattern: ( $ENTITY /'s/? $TOP_TITLE /,/? $SLOT_VALUE ) }  0.010802700675168793
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE /,/? $ENTITY /'s/? $TOP_TITLE ) }  0.010802700675168793
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/,/}] $TOP_TITLE [{lemma:/of/}] /the/? $ENTITY ) }  0.007351837959489872
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/,/}] /the/? $TOP_TITLE [{lemma:/of/}] /the/? $ENTITY ) }  0.007351837959489872
+{ result: "org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/join/}] $ENTITY ) }  0.002700675168792198
+
+// From Ce's Rules
+{ result:"org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/who/}] [{lemma:/join/}] $ENTITY ) } 0.0860927
+{ result:"org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/join/}] $ENTITY ) } 0.0137444
+{ result:"org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/lead/}] $ENTITY ) } 0.00139
+{ result:"org:top_members/employees", pattern: ( $SLOT_VALUE [{lemma:/lead/}] [{lemma:/the/}] $ENTITY ) } 0.0145429

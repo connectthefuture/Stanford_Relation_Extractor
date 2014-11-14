@@ -1,0 +1,4 @@
+{ result: "org:political/religious_affiliation", pattern: ( $ENTITY /,/? [{lemma:/be/}]? [{lemma:/a/}] $SLOT_VALUE ) }
+{ result: "org:political/religious_affiliation", pattern: ( $ENTITY [{lemma:/,/}]? [{lemma:/be/}]? [{lemma:/affiliate/}] [{lemma:/with/}] [{lemma:/the/}]? $SLOT_VALUE ) }
+{ result: "org:political/religious_affiliation", pattern: ( $ENTITY [{lemma:/break/}] [{lemma:/with/}] /the/? [{lemma:/orthodox/}]? $SLOT_VALUE ) }
+{ result: "org:political/religious_affiliation", pattern: ( $ENTITY /,/? [{lemma:/be/}]? [{lemma:/run/}] /by/ /the/? $SLOT_VALUE ) }
