@@ -1,0 +1,32 @@
+Stanford KBP System
+===================
+
+Instructions:
+=============
+1) Download this repo and add the stanford-kbp
+folder to eclipse.
+2) Install and enable JAVA JRE 1.8 in eclipse
+3) Add the classifier model to the system following
+directions below
+
+The system should be good to run either directly from
+eclipse or can be exported as runnable JAR.
+
+DEPENDENCIES:
+=============
+
+1) java jre 1.8
+2) eclipse LUNA
+
+CLASSIFIER MODEL DOWNLOAD:
+=========================
+
+The model is temporarily located at:
+/var/local/vidhoon/thesis/maven_stan_system/model/kbp_relation_model.JOINT_BAYES.50.ser
+
+ADDING CLASSIFIER TO THE SYSTEM:
+================================
+
+Download/Copy the model and place it in the location:
+<directory to git repo>/stanford-kbp/edu/stanford/nlp/kbp
+
