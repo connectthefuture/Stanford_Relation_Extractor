@@ -1,0 +1,9 @@
+{ result: "org:parents", pattern: ( $SLOT_VALUE /'s/? /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute/ /of|for/ $ENTITY ) }
+{ result: "org:parents", pattern: ( $ENTITY /at/ $SLOT_VALUE ) }
+{ result: "org:parents", pattern: ( $ENTITY []{1,4} /a/ /subsidiary/ /of/ $SLOT_VALUE ) }
+{ result: "org:parents", pattern: ( $SLOT_VALUE /'s/ /subsidiary/ /,|:/? $ENTITY ) }
+
+// From Ce's rules
+{ result:"org:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}]? [{lemma:/subsidiary/}] $ENTITY ) } 0.541667
+{ result:"org:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/corporate/}] $SLOT_VALUE ) } 0.714286
+{ result:"org:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/a/}] [{lemma:/subsidiary/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.541667

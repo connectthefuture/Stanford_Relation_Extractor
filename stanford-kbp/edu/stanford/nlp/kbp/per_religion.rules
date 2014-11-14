@@ -1,0 +1,1 @@
+{ result: "per:religion", pattern: ( $ENTITY /'m|am|is|was/ /a/? $SLOT_VALUE ) }

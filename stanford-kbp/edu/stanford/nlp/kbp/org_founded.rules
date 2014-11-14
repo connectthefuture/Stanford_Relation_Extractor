@@ -1,0 +1,1 @@
+{ result: "org:founded", pattern: ( $ENTITY [{lemma:/be|,/}]? [{lemma:/found/}] [{lemma:/in/}] $DATE ) }

@@ -1,0 +1,10 @@
+{ result: "org:subsidiaries", pattern: ( $ENTITY /'s/? /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute|[Cc]enter|[Dd]ivision]/ /of|for/ $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: ( $ENTITY /'s/? $SLOT_VALUE /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute|[Cc]enter|[Dd]ivision/ ) }
+{ result: "org:subsidiaries", pattern: ( $SLOT_VALUE []{0,3} /a/ /subsidiary/ /of/ $ENTITY ) }
+{ result: "org:subsidiaries", pattern: ( $ENTITY /'s/ /subsidiary/ /,|:/? $SLOT_VALUE ) }
+{ result: "org:subsidiaries", pattern: ( $SLOT_VALUE /[Ss]chool|[Dd]epartment|[Oo]ffice|[Ii]nstitute|[Cc]enter|[Dd]ivision]/ /at/ /the/? $ENTITY ) }
+
+// From Ce's rules
+{ result:"org:subsidiaries", pattern: ( $ENTITY [{lemma:/'s/}]? [{lemma:/subsidiary/}] $SLOT_VALUE ) } 0.541667
+{ result:"org:subsidiaries", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/corporate/}] $ENTITY ) } 0.714286
+{ result:"org:subsidiaries", pattern: ( $SLOT_VALUE [{lemma:/be/}] [{lemma:/a/}] [{lemma:/subsidiary/}] [{lemma:/of/}] $ENTITY ) } 0.541667

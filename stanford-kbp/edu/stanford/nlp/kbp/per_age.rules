@@ -1,0 +1,9 @@
+{ result: "per:age", pattern: ( $ENTITY /,/ $AGE /,/ ) }
+{ result: "per:age", pattern: ( $ENTITY /\(/ $AGE /\)/ ) }
+{ result: "per:age", pattern: ( $ENTITY []? $AGE /years?/ /-/? /old/ ) }
+{ result: "per:age", pattern: ( $ENTITY []? $AGE /years/ /of/ /age/ ) }
+{ result: "per:age", pattern: ( $ENTITY /will/? [ { lemma:/be/ } ] $AGE ) }
+{ result: "per:age", pattern: ( $AGE [{ner:/..+/}]{0,4} $ENTITY) }
+{ result: "per:age", pattern: ( $AGE /-/? /-?years?/ /-/? /-?old/ [{ner:/..+/}]{0,4} $ENTITY) }
+{ result: "per:age", pattern: ( $ENTITY [{lemma:/turn/}] $AGE ) }
+{ result: "per:age", pattern: ( $ENTITY [{lemma:/'s/}] $AGE []? [{lemma:/birthday/}] ) }

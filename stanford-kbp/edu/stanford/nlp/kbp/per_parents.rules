@@ -1,0 +1,67 @@
+{ result: "per:parents", pattern: ( $ENTITY /,/ /the/? []? /son|daughter|child/ /of/ $SLOT_VALUE )}
+{ result: "per:parents", pattern: ( $ENTITY /is/ /the/? []? /son|daughter|child/ /of/ $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /gave/ /birth/ /to/ $ENTITY ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /'s/? []? /son|daughter|child/ /,/? $ENTITY ) }
+{ result: "per:parents", pattern: ( $ENTITY /'s/? /father|mother|dad|mom/ /,/? $SLOT_VALUE ) }
+{ result: "per:parents", pattern: ( $ENTITY /is/ $SLOT_VALUE /'s/ /son|daughter|child/ ) }
+{ result: "per:parents", pattern: ( $SLOT_VALUE /is/ $ENTITY /'s/ /father|mother|dad|mom|parent/ ) }
+
+// From Ce's Features
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'/}] [{lemma:/mother/}] [{lemma:/,/}] $SLOT_VALUE ) } 0.3
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/daughter/}] $SLOT_VALUE ) } 0.0132013
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/father/}] $SLOT_VALUE ) } 0.134185
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/,/}] $SLOT_VALUE ) } 0.0579216
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/,/}] [{lemma:/prime/}] [{lemma:/minister/}] $SLOT_VALUE ) } 0.25
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/--/}] $SLOT_VALUE ) } 0.166667
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/be/}] $SLOT_VALUE ) } 0.157895
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/mother/}] $SLOT_VALUE ) } 0.159292
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/mother/}] [{lemma:/,/}] $SLOT_VALUE ) } 0.0714286
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/son/}] $SLOT_VALUE ) } 0.014881
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/bear/}] $SLOT_VALUE ) } 0.105263
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/daughter/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.336364
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/father/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.0238095
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/he/}] [{lemma:/son/}] $SLOT_VALUE ) } 0.108108
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/son/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.179856
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/son/}] [{lemma:/of/}] [{lemma:/former/}] [{lemma:/british/}] [{lemma:/prime/}] [{lemma:/minister/}] $SLOT_VALUE ) } 0.769231
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/son/}] [{lemma:/of/}] [{lemma:/president/}] $SLOT_VALUE ) } 0.277778
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/the/}] [{lemma:/daughter/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.295455
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/the/}] [{lemma:/daughter/}] [{lemma:/of/}] [{lemma:/pop/}] [{lemma:/singer/}] $SLOT_VALUE ) } 0.2
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/the/}] [{lemma:/son/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.0651341
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/who/}] [{lemma:/be/}] [{lemma:/bear/}] $SLOT_VALUE ) } 0.16
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/whose/}] [{lemma:/father/}] $SLOT_VALUE ) } 0.385714
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/--/}] [{lemma:/son/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.157895
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/and/}] [{lemma:/he/}] [{lemma:/father/}] [{lemma:/,/}] $SLOT_VALUE ) } 0.166667
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/and/}] [{lemma:/son/}] $SLOT_VALUE ) } 0.133333
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/bear/}] $SLOT_VALUE ) } 0.0288248
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/bear/}] [{lemma:/to/}] $SLOT_VALUE ) } 0.333333
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/the/}] [{lemma:/daughter/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.2
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/the/}] [{lemma:/father/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.235294
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/be/}] [{lemma:/the/}] [{lemma:/son/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.416667
+{ result:"per:parents", pattern: ( $ENTITY [{lemma:/of/}] [{lemma:/she/}] [{lemma:/son/}] $SLOT_VALUE ) } 0.2
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'/}] [{lemma:/son/}] $ENTITY ) } 0.210526
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/daughter/}] $ENTITY ) } 0.247934
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/daughter/}] [{lemma:/,/}] $ENTITY ) } 0.130802
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/eldest/}] [{lemma:/son/}] $ENTITY ) } 0.454545
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/eldest/}] [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.4
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/father/}] $ENTITY ) } 0.0149626
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/,/}] $ENTITY ) } 0.00373832
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/father/}] [{lemma:/,/}] [{lemma:/former/}] [{lemma:/president/}] $ENTITY ) } 0.321429
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/son/}] $ENTITY ) } 0.104189
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.0756458
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/'s/}] [{lemma:/youngest/}] [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.588235
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/daughter/}] $ENTITY ) } 0.4
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/father/}] [{lemma:/of/}] $ENTITY ) } 0.388889
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/he/}] [{lemma:/son/}] $ENTITY ) } 0.0540541
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/son/}] $ENTITY ) } 0.235294
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/whose/}] [{lemma:/daughter/}] $ENTITY ) } 0.2
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/whose/}] [{lemma:/son/}] $ENTITY ) } 0.284211
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/,/}] [{lemma:/whose/}] [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.304348
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/daughter/}] $ENTITY ) } 0.309524
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/he/}] [{lemma:/daughter/}] $ENTITY ) } 0.307692
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/he/}] [{lemma:/son/}] $ENTITY ) } 0.510638
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/he/}] [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.4375
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/and/}] [{lemma:/she/}] [{lemma:/daughter/}] $ENTITY ) } 0.315789
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/be/}] [{lemma:/the/}] [{lemma:/son/}] [{lemma:/of/}] $ENTITY ) } 0.0666667
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/daughter/}] $ENTITY ) } 0.15
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/say/}] [{lemma:/they/}] [{lemma:/daughter/}] $ENTITY ) } 0.642857
+{ result:"per:parents", pattern: ( $SLOT_VALUE [{lemma:/son/}] [{lemma:/,/}] $ENTITY ) } 0.0103093

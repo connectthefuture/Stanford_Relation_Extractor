@@ -1,0 +1,15 @@
+{ result: "per:employee_of", pattern: ( $SLOT_VALUE_ORG /'s/? $TOP_TITLE /,/? $ENTITY ) }  0.010802700675168793
+{ result: "per:employee_of", pattern: ( $ENTITY /,/? $SLOT_VALUE_ORG /'s/? $TOP_TITLE ) }  0.010802700675168793
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] $TOP_TITLE [{lemma:/of/}] $SLOT_VALUE_ORG ) }  0.007351837959489872
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] /the/? $TOP_TITLE [{lemma:/of/}] /the/? $SLOT_VALUE_ORG ) }  0.007351837959489872
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/join/}] $SLOT_VALUE_ORG ) }  0.002700675168792198
+{ result: "per:employee_of", pattern: ( $SLOT_VALUE_ORG /'s/? [{ner:/TITLE/}] /,/? $ENTITY ) }  0.010802700675168793
+{ result: "per:employee_of", pattern: ( $ENTITY /,/? $SLOT_VALUE_ORG /'s/? [{ner:/TITLE/}] ) }  0.010802700675168793
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] [{ner:/TITLE/}] [{lemma:/of/}] /the/? $SLOT_VALUE_ORG ) }  0.007351837959489872
+{ result: "per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] /the/? [{ner:/TITLE/}] [{lemma:/of/}] /the/? $SLOT_VALUE_ORG ) }  0.007351837959489872
+
+// From Ce's Rules
+{ result:"per:employee_of", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/who/}] [{lemma:/join/}] $SLOT_VALUE_ORG ) } 0.0860927
+{ result:"per:employee_of", pattern: ( $ENTITY [{lemma:/join/}] $SLOT_VALUE_ORG ) } 0.0137444
+{ result:"per:employee_of", pattern: ( $ENTITY [{lemma:/lead/}] $SLOT_VALUE_ORG ) } 0.00139
+{ result:"per:employee_of", pattern: ( $ENTITY [{lemma:/lead/}] [{lemma:/the/}] $SLOT_VALUE_ORG ) } 0.0145429

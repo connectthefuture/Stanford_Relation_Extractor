@@ -1,0 +1,1 @@
+{ result: "per:date_of_birth", pattern: ( $ENTITY /,/? /was/? /born/ /on/? $SLOT_VALUE ) }

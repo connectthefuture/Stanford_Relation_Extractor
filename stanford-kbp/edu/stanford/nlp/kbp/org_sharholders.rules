@@ -1,0 +1,1 @@
+{ result: "org:shareholders", pattern: ( $SLOT_VALUE /,/? [{lemma:/be|have/}] /a/? /primary/? /shareholder|stake|stockholder/ /in|of/ $ENTITY ) }

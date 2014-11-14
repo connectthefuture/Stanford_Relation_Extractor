@@ -1,0 +1,2 @@
+{ result: "per:date_of_death", pattern: ( $ENTITY /passed/ /away/ /on/ $SLOT_VALUE ) }
+{ result: "per:date_of_death", pattern: ( $ENTITY /died/ /on/? $SLOT_VALUE ) }

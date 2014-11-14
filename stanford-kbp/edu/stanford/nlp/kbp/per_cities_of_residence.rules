@@ -1,0 +1,13 @@
+// From Ce's rules
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/hometown/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.0961857
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/'s/}] [{lemma:/native/}] $SLOT_VALUE ) } 0.132597
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/a/}] [{lemma:/native/}] [{lemma:/of/}] $SLOT_VALUE ) } 0.0765253
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/who/}] [{lemma:/move/}] [{lemma:/to/}] $SLOT_VALUE ) } 0.112069
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/bury/}] [{lemma:/in/}] [{lemma:/she/}] [{lemma:/native/}] $SLOT_VALUE ) } 0.5
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/in/}] [{lemma:/she/}] [{lemma:/native/}] $SLOT_VALUE ) } 0.236364
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/move/}] [{lemma:/back/}] [{lemma:/to/}] $SLOT_VALUE ) } 0.289474
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/move/}] [{lemma:/from/}] $SLOT_VALUE ) } 0.177778
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/move/}] [{lemma:/into/}] [{lemma:/the/}] $SLOT_VALUE ) } 0.34375
+{ result:"per:cities_of_residence", pattern: ( $ENTITY [{lemma:/move/}] [{lemma:/to/}] $SLOT_VALUE ) } 0.0491013
+{ result:"per:cities_of_residence", pattern: ( $SLOT_VALUE [{lemma:/native/}] $ENTITY ) } 0.121053
+{ result:"per:cities_of_residence", pattern: ( $SLOT_VALUE [{lemma:/native/}] [{lemma:/,/}] $ENTITY ) } 0.235849

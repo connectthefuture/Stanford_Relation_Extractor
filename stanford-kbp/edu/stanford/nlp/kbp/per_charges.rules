@@ -1,0 +1,2 @@
+{ result: "per:charges", pattern: ( $ENTITY []{0,5} /[Aa]rrested|[Cc]onvicted|[Cc]harged|[Ii]ndicted/ []{0,5} $CRIMINAL_CHARGE ) }
+{ result: "per:charges", pattern: ( /filed/ $CRIMINAL_CHARGE [ { lemma:/charge/ } ] []{0,5} $ENTITY ) }

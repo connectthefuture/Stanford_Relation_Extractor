@@ -1,0 +1,4 @@
+{ result: "org:dissolved", pattern: ( $ENTITY [{lemma:/be|,/}]? [{lemma:/dissolved/}] [{lemma:/in/}] $DATE ) }
+{ result: "org:dissolved", pattern: ( $ENTITY [{lemma:/go|,/}]? [{lemma:/bankrupt/}] [{lemma:/in/}]? $DATE ) }
+{ result: "org:dissolved", pattern: ( $ENTITY [{lemma:/close/}]? [{lemma:/it/}] [{lemma:/'s/}] [{lemma:/door/}] [{lemma:/in/}] $DATE ) }
+{ result: "org:dissolved", pattern: ( $ENTITY [{lemma:/go/}]? [{lemma:/out/}] [{lemma:/of/}] [{lemma:/business/}] [{lemma:/in/}] $DATE ) }

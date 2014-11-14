@@ -1,0 +1,5 @@
+// From Ce's features
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/bear/}] [{lemma:/in/}] [{ner:/COUNTRY/}]* /,/? $SLOT_VALUE ) } 0.0617075
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/who/}] [{lemma:/be/}] [{lemma:/bear/}] [{lemma:/in/}] [{ner:/COUNTRY/}]* /,/?  $SLOT_VALUE ) } 0.0637513
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY [{lemma:/,/}] [{lemma:/who/}] [{lemma:/be/}] [{lemma:/bear/}] [{lemma:/in/}] [{lemma:/the/}] [{ner:/COUNTRY/}]* /,/?  $SLOT_VALUE ) } 0.24
+{ result:"per:stateorprovinces_of_residence", pattern: ( $ENTITY [{lemma:/bear/}] [{lemma:/in/}] [{ner:/COUNTRY/}]* /,/?  $SLOT_VALUE ) } 0.0981595
