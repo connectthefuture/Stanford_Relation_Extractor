@@ -54,7 +54,7 @@ public class Props {
 
   public static enum YEAR { KBP2009, KBP2010, KBP2011, KBP2012, KBP2013, KBP2014 }
   @Option(name="kbp.year", gloss="If true, logging will be more verbose")
-  public static YEAR KBP_YEAR = YEAR.KBP2010;
+  public static YEAR KBP_YEAR = YEAR.KBP2013;
   @Option(name="kbp.runid", gloss="The id of the run, for official evaluation")
   public static String KBP_RUNID = "stanford1";
 
@@ -69,7 +69,12 @@ public class Props {
 
   /** The model path; constructed on initialization */
   public static String KBP_MODEL_PATH;
-
+  
+  //
+  // VIRTUAL IR 
+  //
+  @Option(name="candidatesentences.path", gloss="Path for candidate sentences to bypass IR")
+  public static String CANDIDATE_SENTENCES_PATH = "";
   //
   // ENTITY LINKING
   //

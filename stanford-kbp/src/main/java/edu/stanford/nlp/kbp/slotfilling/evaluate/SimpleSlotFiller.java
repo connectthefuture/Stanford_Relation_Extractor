@@ -2,7 +2,10 @@ package edu.stanford.nlp.kbp.slotfilling.evaluate;
 
 import static edu.stanford.nlp.util.logging.Redwood.Util.*;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
@@ -12,21 +15,26 @@ import edu.stanford.nlp.kbp.entitylinking.AcronymMatcher;
 import edu.stanford.nlp.kbp.slotfilling.classify.HeuristicRelationExtractor;
 import edu.stanford.nlp.kbp.slotfilling.classify.ModelType;
 import edu.stanford.nlp.kbp.slotfilling.classify.RelationClassifier;
+import edu.stanford.nlp.kbp.common.KBPOfficialEntity;
+import edu.stanford.nlp.kbp.common.Maybe;
 import edu.stanford.nlp.kbp.common.*;
 import edu.stanford.nlp.kbp.common.CollectionUtils;
 import edu.stanford.nlp.kbp.slotfilling.ir.KBPIR;
+import edu.stanford.nlp.kbp.slotfilling.ir.PostIRAnnotator;
 import edu.stanford.nlp.kbp.slotfilling.ir.StandardIR;
 import edu.stanford.nlp.kbp.slotfilling.ir.KBPRelationProvenance;
 import edu.stanford.nlp.kbp.slotfilling.process.*;
 import edu.stanford.nlp.kbp.slotfilling.process.KBPProcess.AnnotateMode;
 import edu.stanford.nlp.kbp.slotfilling.process.RelationFilter.RelationFilterBuilder;
 import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.stats.ClassicCounter;
 import edu.stanford.nlp.stats.Counter;
 import edu.stanford.nlp.stats.Counters;
 import edu.stanford.nlp.util.*;
 import edu.stanford.nlp.util.logging.Redwood;
+import edu.stanford.nlp.pipeline.*;
 
 /**
  * An implementation of a SlotFiller.
@@ -48,7 +56,11 @@ public class SimpleSlotFiller implements SlotFiller {
   public final Maybe<RelationFilter> relationFilterForFeaturizer;
   /** Additional classifiers to use -- e.g., for rule-based additions */
   public final RelationClassifier[] additionalClassifiers;
-  
+  /** Members added for virtual IR **/
+  public List<SentenceTriple> sentenceRecords = new ArrayList<SentenceTriple>();
+  StanfordCoreNLP IRpipeline = null;
+  List<CoreMap> rawSentences=null;
+  HashMap<String,HashMap<String,ArrayList<SentenceDouble>>> sentencesContainer=null;
   /**
    * Used to keep track of all the (entity, slot fill candidate) pairs recovered via IR
    */
@@ -89,6 +101,60 @@ public class SimpleSlotFiller implements SlotFiller {
     for (int i = 0; i < Props.TEST_AUXMODELS.length; ++i) {
       this.additionalClassifiers[i] = Props.TEST_AUXMODELS[i].construct(props);
     }
+    
+    //create pipeline for virtual IR 
+    IRpipeline = new StanfordCoreNLP(props);
+    
+    
+    
+    /*populate sentences container*/
+    sentencesContainer=new HashMap<String,HashMap<String,ArrayList<SentenceDouble>>>();
+    try {
+		BufferedReader br = new BufferedReader(new FileReader(Props.CANDIDATE_SENTENCES_PATH));
+		String text;
+		String delimiter="\t";
+		while((text=br.readLine()) != null){
+			//content+=text;
+			String[] fields=text.split(delimiter);
+			String eid=fields[0];//eid
+			String rn=fields[1];//relation name
+			String sent=fields[8];//sentence text			
+			String prov=fields[3]; //total provenance string
+			SentenceDouble sentRecord=new SentenceDouble(sent,prov);
+			//System.out.println("Inserting record for "+eid);
+			if(sentencesContainer.containsKey(eid)){
+				HashMap<String,ArrayList<SentenceDouble>> entitySentMap=sentencesContainer.get(eid);
+				if(entitySentMap.containsKey(rn)){
+					ArrayList<SentenceDouble> entityRelSents=entitySentMap.get(rn);					
+					entityRelSents.add(sentRecord);
+					entitySentMap.put(rn, entityRelSents);
+					sentencesContainer.put(eid, entitySentMap);
+				}
+				else{
+					//no sentences for that relation
+					ArrayList<SentenceDouble> entityRelSents=new ArrayList<SentenceDouble>();
+					entityRelSents.add(sentRecord);
+					entitySentMap.put(rn, entityRelSents);
+					sentencesContainer.put(eid, entitySentMap);
+				}
+			}
+			else{
+				//no entry for the entity itself
+				HashMap<String,ArrayList<SentenceDouble>> entitySentMap=new HashMap<String,ArrayList<SentenceDouble>>();
+				ArrayList<SentenceDouble> entityRelSents=new ArrayList<SentenceDouble>();
+				entityRelSents.add(sentRecord);
+				entitySentMap.put(rn, entityRelSents);
+				sentencesContainer.put(eid, entitySentMap);
+			}
+
+		}	
+		br.close();
+
+    }
+    catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
   }
 
   @Override
@@ -291,6 +357,76 @@ public class SimpleSlotFiller implements SlotFiller {
     return finalRelations;
   }
 
+ private List<CoreMap> querySentencesVirtualIR(KBPOfficialEntity entity,int sentLimit){
+	  List<CoreMap> resultSentences = new ArrayList<CoreMap>();
+	  System.out.println("querying sentences for "+entity.queryId);
+	  int counter=0;
+	  int processLimit=5;
+	  String sentCollection =null;
+	  if(sentencesContainer.containsKey(entity.queryId.get())){
+		  HashSet<String> sentSet = new HashSet<String>();
+		  HashMap<String,ArrayList<SentenceDouble>> entitySentMap=sentencesContainer.get(entity.queryId.get());
+		  
+		  PostIRAnnotator postirAnn=new PostIRAnnotator(entity, true);
+		  
+		  for(String key:entitySentMap.keySet()){
+			  ArrayList<SentenceDouble> entityRelSents=entitySentMap.get(key);
+			  for(SentenceDouble sd : entityRelSents){
+				  if(sentSet.contains(sd.sentence)){
+					  continue;
+				  }
+				  else{
+					  sentSet.add(sd.sentence);
+				  }
+				  if(counter>sentLimit)
+					  break;
+				 // System.out.println("processing  --  "+sd.sentence);
+				  counter++;
+				  
+				  
+				  if(sentCollection==null){
+					  sentCollection=new String(sd.sentence);
+				  }
+				  else{
+					  sentCollection+=" "+sd.sentence;
+				  }
+				  Annotation doc = new Annotation(sd.sentence);
+				  IRpipeline.annotate(doc);	
+				  List<CoreMap> tres  = doc.get(SentencesAnnotation.class);
+					 
+				  
+			  	  for(CoreMap t : tres){
+			  		  //	System.out.println("coremap: "+res);			  		  
+			  		  sd.provenance.containingSentenceLossy=Maybe.Just(t);
+			  	  }
+				  if(counter%processLimit == 0){
+					  System.out.println("Starting combined basic pipeline annotation");
+					  System.out.println("Number of sentences: "+counter);
+					  Annotation document = new Annotation(sentCollection);
+				  	  IRpipeline.annotate(document);				
+				  	  System.out.println("Ending combined basic pipeline annotation");
+				  	  postirAnn.annotate(document);
+				  	  System.out.println("Ending combined post ir pipeline annotation");
+				  	  List<CoreMap> tempResults  = document.get(SentencesAnnotation.class);
+				 
+				  
+				  	  for(CoreMap res : tempResults){
+				  		  //	System.out.println("coremap: "+res);
+				  		  resultSentences.add(res);				  		
+				  	  }
+				  	  //erase sentence collection
+				  	sentCollection=new String();
+				  }
+			  }
+		  }
+		  System.out.println("returning "+resultSentences.size()+"sentences for "+entity.queryId);
+		  return resultSentences;
+	  }
+	  else{
+		  System.out.println("returning null for "+entity.queryId);
+		  return null;
+	  }
+  }
   /**
    * Query and annotate a KBPOfficialEntity to get a featurized and annotated KBPTuple.
    *
@@ -303,16 +439,19 @@ public class SimpleSlotFiller implements SlotFiller {
 
     // -- IR
     // Get supporting sentences
-    List<CoreMap> rawSentences;
-    try {
-      rawSentences = irComponent.querySentences(entity,
-          entity.representativeDocumentId().isDefined() ? new HashSet<>(Arrays.asList(entity.queryId.get())) : new HashSet<String>(),
-          sentencesPerEntity);
-    } catch (Exception e) {
-      e.printStackTrace();
-      logger.err(RED, "Querying failed! Is Lucene set up at the paths:  " + Arrays.toString(Props.INDEX_PATHS) + "?");
-      rawSentences = Collections.EMPTY_LIST;
+    List<CoreMap> rawSentences=querySentencesVirtualIR(entity, sentencesPerEntity);
+    if(rawSentences==null){
+    	return null;
     }
+//    try {
+//      rawSentences = irComponent.querySentences(entity,
+//          entity.representativeDocumentId().isDefined() ? new HashSet<>(Arrays.asList(entity.queryId.get())) : new HashSet<String>(),
+//          sentencesPerEntity);
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//      logger.err(RED, "Querying failed! Is Lucene set up at the paths:  " + Arrays.toString(Props.INDEX_PATHS) + "?");
+//      rawSentences = Collections.EMPTY_LIST;
+//    }
     // Get datums from sentences.
     Redwood.startTrack("Annotating " + rawSentences.size() + " sentences...");
     List<CoreMap> supportingSentences = process.annotateSentenceFeatures(entity, rawSentences, AnnotateMode.ALL_PAIRS);

@@ -44,7 +44,7 @@ public class KBPRelationProvenance implements Serializable {
   /** The span of the slot fill in the sentence */
   public final Maybe<Span> slotValueMentionInSentence;
   /** Optionally, the sentence in which this slot fill occurs */
-  public final Maybe<CoreMap> containingSentenceLossy;
+  public Maybe<CoreMap> containingSentenceLossy;
 
   /** Confidence score assigned by the classifier */
   public final Maybe<Double> score;
@@ -86,7 +86,9 @@ public class KBPRelationProvenance implements Serializable {
     if (Props.KBP_VALIDATE && Props.VALIDATE_RULES_DO) {
       lossySentence = containingSentence;  // in validation mode, this is our only hook into the original sentence
     } else {
+
       lossySentence = new ArrayCoreMap(1);
+  	if(containingSentence!=null){
       List<CoreLabel> tokens = new ArrayList<>(containingSentence.get(CoreAnnotations.TokensAnnotation.class).size());
       for (CoreLabel token : containingSentence.get(CoreAnnotations.TokensAnnotation.class)) {
         CoreLabel lossyToken = new CoreLabel(6);
@@ -96,9 +98,10 @@ public class KBPRelationProvenance implements Serializable {
         lossyToken.set(CoreAnnotations.NamedEntityTagAnnotation.class, token.get(CoreAnnotations.NamedEntityTagAnnotation.class));
         lossyToken.set(CoreAnnotations.NumericValueAnnotation.class, token.get(CoreAnnotations.NumericValueAnnotation.class));
         lossyToken.set(TimeAnnotations.TimexAnnotation.class, token.get(TimeAnnotations.TimexAnnotation.class));
-        tokens.add(lossyToken);
+        tokens.add(lossyToken);      
       }
       lossySentence.set(CoreAnnotations.TokensAnnotation.class, tokens);
+  	}
     }
     this.containingSentenceLossy = Maybe.Just(lossySentence);
     this.score = score;

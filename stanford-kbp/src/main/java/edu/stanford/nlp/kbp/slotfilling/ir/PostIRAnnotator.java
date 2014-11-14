@@ -129,7 +129,7 @@ public class PostIRAnnotator implements Annotator {
 
     srParser = new ParserAnnotator("parse", new Properties() {{
       setProperty("annotators", "parse");
-      setProperty("parse.model", "/u/nlp/data/srparser/englishSR.ser.gz");
+      setProperty("parse.model", "edu/stanford/nlp/models/srparser/englishSR.ser.gz");
       setProperty("parse.nosquash", "true");
       setProperty("parse.maxlen", "500");
     }});
